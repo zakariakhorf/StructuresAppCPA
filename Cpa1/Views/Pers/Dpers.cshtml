@@ -1,0 +1,43 @@
+﻿@model Cpa1.Models.Personne
+
+@{
+    ViewData["Title"] = "Dpers";
+}
+
+<h2>Détails Gérant</h2>
+
+<div>
+    <h4>Personne</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.code)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.code)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Prenom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prenom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.qualite)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.qualite)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.code }) |
+    @Html.ActionLink("Back to list", "Lstruct", "structure", new { /* id = Model.PrimaryKey */ })
+    <p>&copy; 2019 - CPA</p>
+</div>

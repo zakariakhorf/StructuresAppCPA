@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Cpa1.Models.structure>
+
+@{
+    ViewData["Title"] = "Lstruct";
+}
+
+<h2>Liste des Structures du CPA</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.code)
+            </th>
+            <th>
+                Abréviation
+            </th>
+            <th>
+                Désignation
+            </th>
+            <th>
+                Adresse
+            </th>
+            <th>
+                N°telephone
+            </th>
+            <th>
+                N°fax
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IDpersonne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IDattaché)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.abr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.desig)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.adr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IDpersonne)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IDattaché)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.code }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.code }) |
+                    @Html.ActionLink("Details Gérant", "DPers", "pers", new { id = item.IDpersonne })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>&copy; 2019 - CPA</p>

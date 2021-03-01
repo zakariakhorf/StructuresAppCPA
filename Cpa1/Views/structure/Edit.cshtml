@@ -1,0 +1,83 @@
+﻿@model Cpa1.Models.structure
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<head>
+    <title>
+        <script type="text/javascript" src="~/js/site.js"></script>
+    </title>
+</head>
+
+<h2>Edit</h2>
+
+<h4>structure</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div  class="form-group">
+                <label asp-for="code" class="control-label"></label>
+                <input id="code" asp-for="code" class="form-control" >
+                <span asp-validation-for="code" class="text-danger"></span>
+                 <div id="Status">
+                 </div>
+              
+                <div class="form-group">
+                    <label asp-for="abr" class="control-label"></label>
+                    <input asp-for="abr" class="form-control" />
+                    <span asp-validation-for="abr" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="desig" class="control-label"></label>
+                    <input asp-for="desig" class="form-control" />
+                    <span asp-validation-for="desig" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="adr" class="control-label"></label>
+                    <input asp-for="adr" class="form-control" />
+                    <span asp-validation-for="adr" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="telephone" class="control-label"></label>
+                    <input asp-for="telephone" class="form-control" type="number" />
+                    <span asp-validation-for="telephone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="fax" class="control-label"></label>
+                    <input asp-for="fax" class="form-control" type="number" />
+                    <span asp-validation-for="fax" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IDpersonne" class="control-label"></label>
+                    <input asp-for="IDpersonne" class="form-control" />
+                    <span asp-validation-for="IDpersonne" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IDattaché" class="control-label"></label>
+                    <input asp-for="IDattaché" class="form-control" />
+                    <span asp-validation-for="IDattaché" class="text-danger"></span>
+                </div>
+                <div asp-action="Edit" class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+
+
+      </form>
+    </div>
+
+
+
+    <div>
+        <a asp-action="Lstruct">Back to List</a>
+    </div>
+    <p>&copy; 2019 - CPA</p>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+}

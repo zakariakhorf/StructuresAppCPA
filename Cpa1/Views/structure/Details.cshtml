@@ -1,0 +1,68 @@
+﻿@model Cpa1.Models.structure
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>structure</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.code)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.code)
+        </dd>
+        <dt>
+            Abréviation
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.abr)
+        </dd>
+        <dt>
+            Désignation
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.desig)
+        </dd>
+        <dt>
+            Adresse
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.adr)
+        </dd>
+        <dt>
+            N°telephone
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.telephone)
+        </dd>
+        <dt>
+            N°fax
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IDpersonne)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IDpersonne)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IDattaché)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IDattaché)
+        </dd>
+    </dl>
+</div>
+<div>
+
+
+    <a asp-action="lstruct">Back to List</a>
+    <p>&copy; 2019 - CPA</p>
+</div>
